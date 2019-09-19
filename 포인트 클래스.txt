@@ -1,0 +1,61 @@
+#include <iostream>
+using namespace std;
+
+class Point {
+	double x;
+	double y;
+
+public:
+	Point();
+	Point(double xx, double yy);
+
+	double getX();
+	double getY();
+
+	void setX(double xx);
+	void setY(double yy);
+
+	void showPoint();
+
+};
+
+Point::Point() {
+	x = 0;
+	y = 0;
+}
+
+Point::Point(double xx, double yy) {
+	x = xx; //변수명 중복을 피해서 xx로 임의 정의.
+	y = yy;
+}
+
+
+double Point::getX() {
+	return x;
+}
+
+double Point::getY() {
+	return y;
+}
+
+void Point::setX(double xx) {
+	x = xx;
+}
+void Point::setY(double yy) {
+	y = yy;
+}
+
+void Point::showPoint() {
+}
+
+int main() { 
+	Point p1(7, 4);
+	Point p2(4, 6);
+
+	cout << "p1의 값은" << "(" << p1.getX << "," << p1.getY << ")" << endl;
+	cout << "p2의 값은" << "(" <<p2.getX << "," << p2.getY << ")" << endl;
+
+}
+
+
+
